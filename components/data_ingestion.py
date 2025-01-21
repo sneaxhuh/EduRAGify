@@ -30,7 +30,6 @@ def save_note_as_pdf(note_text, filename):
     try:
         
         buffer = io.BytesIO()  # Create an in-memory buffer
-        st.write("DEBUG: Buffer created.")
 
         c = canvas.Canvas(buffer, pagesize=letter)
         width, height = letter
