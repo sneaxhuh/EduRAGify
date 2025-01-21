@@ -10,7 +10,7 @@ from components.data_ingestion import upload_to_snowflake_stage, save_note_as_pd
 from components.files import uploaded_files
 
 def main():
-    st.title("Chat Assistant with Snowflake Cortex")
+    st.title("EduRagify")
 
     with st.sidebar:
         tab = option_menu(
