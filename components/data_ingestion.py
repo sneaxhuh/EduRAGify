@@ -34,19 +34,14 @@ def save_note_as_pdf(note_text, filename):
 
         c = canvas.Canvas(buffer, pagesize=letter)
         width, height = letter
-        st.write(f"DEBUG: Canvas created with size: {width}x{height}")
 
         c.drawString(100, height - 100, note_text)  # Writing note text to the PDF
-        st.write(f"DEBUG: Note text written to the PDF.")
-       
         c.save()
-        st.write("DEBUG: PDF saved to buffer.")
-
         
         buffer.seek(0)  
         with open(filename, "wb") as f:
             f.write(buffer.getvalue())
-        st.write(f"DEBUG: PDF saved as {filename}.")
+        st.success(f"Note saved successfully!")
 
         # Return the filename to upload it to Snowflake
         return filename
