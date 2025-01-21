@@ -1,0 +1,6 @@
+streamlit
+snowflake
+snowflake-snowpark-python
+snowflake.core
+streamlit-option-menu
+reportlab
